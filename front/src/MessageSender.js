@@ -70,7 +70,7 @@ const MessageSender = () => {
                 formData.append('numbers[]', number); // Usa 'numbers[]' para tratarlo como un array
             
 
-                const response = await fetch('http://localhost:5000/send-message', {
+                const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/send-message`, {
                     method: 'POST',
                     body: formData,
                 });
